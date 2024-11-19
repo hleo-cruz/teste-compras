@@ -4,6 +4,7 @@ import com.br.teste.compras.api.response.ClienteRecomendacaoResponseDTO;
 import com.br.teste.compras.api.response.ClienteResponseDTO;
 import com.br.teste.compras.api.response.CompraClienteResponseDTO;
 import com.br.teste.compras.api.response.CompraResponseDTO;
+import com.br.teste.compras.client.clientes.ClienteCompraModel;
 import com.br.teste.compras.client.clientes.ClienteModel;
 import com.br.teste.compras.client.clientes.ClienteRestTemplateClient;
 import com.br.teste.compras.client.produto.ProdutoModel;
@@ -12,13 +13,9 @@ import com.br.teste.compras.mapper.ClienteCompraMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.math.BigDecimal;
-import java.util.Comparator;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 @Service
 public class ClienteCompraService {
@@ -36,12 +33,16 @@ public class ClienteCompraService {
 
         List<CompraClienteResponseDTO> historicoClientes = construirLista();
 
-        historicoClientes.forEach(cliente -> {
-            cliente.getCompras().stream().sorted(Comparator.comparing(CompraResponseDTO::getValorTotal))
-                    .toList();
-        });
+        return historicoClientes.stream()
+                .peek(cliente -> {
 
-        return historicoClientes;
+                            List<CompraResponseDTO> compras = cliente.getCompras().stream()
+                                    .sorted((compra1, compra2) -> compra2.getValorTotal().compareTo(compra1.getValorTotal()))
+                                    .toList();
+                            cliente.setCompras(compras);
+                        }
+                )
+                .toList();
     }
 
     public Optional<CompraClienteResponseDTO> buscarMaiorCompraAno(final Integer anoCompra) {
@@ -56,10 +57,14 @@ public class ClienteCompraService {
 
         final List<CompraClienteResponseDTO> clientes = clienteClient.listarClientes()
                 .stream()
-                .filter(cliente -> !cliente.getCompras()
-                        .stream()
-                        .filter(Objects::nonNull)
-                        .filter(compra -> produtoIdList.contains(compra.getCodigoAsLong())).toList().isEmpty())
+                .peek(cliente -> {
+
+                    List<ClienteCompraModel> compras = cliente.getCompras().stream()
+                            .filter(compra -> produtoIdList.contains(compra.getCodigoAsLong()))
+                            .toList();
+
+                    cliente.setCompras(compras);
+                })
                 .map(cliente -> mapper.toDTO(produtos, cliente))
                 .toList();
 
@@ -78,9 +83,16 @@ public class ClienteCompraService {
     }
 
     public List<ClienteRecomendacaoResponseDTO> recomendacoes() {
-        return construirLista().stream().peek(cliente -> cliente.getCompras().stream()
-                .sorted((produto1, produto2) -> produto2.getQuantidade().compareTo(produto1.getQuantidade()))
-                .limit(1).toList()).map(ClienteRecomendacaoResponseDTO::new)
+        return construirLista().stream()
+                .peek(cliente -> {
+
+                    List<CompraResponseDTO> compras = cliente.getCompras().stream()
+                            .sorted((produto1, produto2) -> produto2.getQuantidade().compareTo(produto1.getQuantidade()))
+                            .limit(1).toList();
+
+                    cliente.setCompras(compras);
+
+                }).map(ClienteRecomendacaoResponseDTO::new)
                 .toList();
     }
 

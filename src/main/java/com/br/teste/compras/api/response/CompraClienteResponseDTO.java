@@ -1,5 +1,6 @@
 package com.br.teste.compras.api.response;
 
+import com.fasterxml.jackson.annotation.*;
 import lombok.Builder;
 import lombok.Data;
 
@@ -13,6 +14,7 @@ public class CompraClienteResponseDTO {
 
     private String clienteNome;
     private String clienteCpf;
+    @JsonSetter(contentNulls = Nulls.SKIP)
     private List<CompraResponseDTO> compras;
 
     public BigDecimal getValorTotal() {
