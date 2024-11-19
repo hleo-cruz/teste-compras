@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: teste-compras
+server:
+  port: 8080
+
