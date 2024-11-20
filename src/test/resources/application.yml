@@ -1,11 +1,5 @@
-spring:
-  application:
-    name: teste-compras
-server:
-  port: 8080
-
 client:
   url:
-    base: "https://rgr3viiqdl8sikgv.public.blob.vercel-storage.com/"
+    base: "http://localhost:8082/"
     cliente: ${client.url.base}clientes-Vz1U6aR3GTsjb3W8BRJhcNKmA81pVh.json
     produto: ${client.url.base}produtos-mnboX5IPl6VgG390FECTKqHsD9SkLS.json

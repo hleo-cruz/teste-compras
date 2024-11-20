@@ -1,0 +1,20 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/produtos-mnboX5IPl6VgG390FECTKqHsD9SkLS.json",
+    "headers": {
+      "content-type": {
+        "caseInsensitive": true,
+        "equalTo": "application/json"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": "[\n  {\n    \"codigo\": 1,\n    \"tipo_vinho\": \"Tomate\",\n    \"preco\": 229.99,\n    \"safra\": \"2017\",\n    \"ano_compra\": 2018\n  },\n  {\n    \"codigo\": 2,\n    \"tipo_vinho\": \"Branco\",\n    \"preco\": 126.50,\n    \"safra\": \"2018\",\n    \"ano_compra\": 2019\n  },\n  {\n    \"codigo\": 3,\n    \"tipo_vinho\": \"Rosé\",\n    \"preco\": 121.75,\n    \"safra\": \"2019\",\n    \"ano_compra\": 2020\n  },\n  {\n    \"codigo\": 4,\n    \"tipo_vinho\": \"Espumante\",\n    \"preco\": 134.25,\n    \"safra\": \"2020\",\n    \"ano_compra\": 2021\n  },\n  {\n    \"codigo\": 5,\n    \"tipo_vinho\": \"Chardonnay\",\n    \"preco\": 128.99,\n    \"safra\": \"2021\",\n    \"ano_compra\": 2022\n  },\n  {\n    \"codigo\": 6,\n    \"tipo_vinho\": \"Tinto\",\n    \"preco\": 327.50,\n    \"safra\": \"2016\",\n    \"ano_compra\": 2017\n  },\n  {\n    \"codigo\": 7,\n    \"tipo_vinho\": \"Branco\",\n    \"preco\": 125.25,\n    \"safra\": \"2017\",\n    \"ano_compra\": 2018\n  },\n  {\n    \"codigo\": 8,\n    \"tipo_vinho\": \"Rosé\",\n    \"preco\": 120.99,\n    \"safra\": \"2018\",\n    \"ano_compra\": 2019\n  },\n  {\n    \"codigo\": 9,\n    \"tipo_vinho\": \"Espumante\",\n    \"preco\": 135.50,\n    \"safra\": \"2019\",\n    \"ano_compra\": 2020\n  },\n  {\n    \"codigo\": 10,\n    \"tipo_vinho\": \"Chardonnay\",\n    \"preco\": 130.75,\n    \"safra\": \"2020\",\n    \"ano_compra\": 2021\n  },\n  {\n    \"codigo\": 11,\n    \"tipo_vinho\": \"Tinto\",\n    \"preco\": 128.99,\n    \"safra\": \"2017\",\n    \"ano_compra\": 2018\n  },\n  {\n    \"codigo\": 12,\n    \"tipo_vinho\": \"Branco\",\n    \"preco\": 106.50,\n    \"safra\": \"2018\",\n    \"ano_compra\": 2019\n  },\n  {\n    \"codigo\": 13,\n    \"tipo_vinho\": \"Rosé\",\n    \"preco\": 121.75,\n    \"safra\": \"2019\",\n    \"ano_compra\": 2020\n  },\n  {\n    \"codigo\": 14,\n    \"tipo_vinho\": \"Espumante\",\n    \"preco\": 134.25,\n    \"safra\": \"2020\",\n    \"ano_compra\": 2021\n  },\n  {\n    \"codigo\": 15,\n    \"tipo_vinho\": \"Chardonnay\",\n    \"preco\": 188.99,\n    \"safra\": \"2021\",\n    \"ano_compra\": 2022\n  },\n  {\n    \"codigo\": 16,\n    \"tipo_vinho\": \"Tinto\",\n    \"preco\": 127.50,\n    \"safra\": \"2016\",\n    \"ano_compra\": 2017\n  },\n  {\n    \"codigo\": 17,\n    \"tipo_vinho\": \"Branco\",\n    \"preco\": 125.25,\n    \"safra\": \"2017\",\n    \"ano_compra\": 2018\n  },\n  {\n    \"codigo\": 18,\n    \"tipo_vinho\": \"Rosé\",\n    \"preco\": 120.99,\n    \"safra\": \"2018\",\n    \"ano_compra\": 2019\n  },\n  {\n    \"codigo\": 19,\n    \"tipo_vinho\": \"Espumante\",\n    \"preco\": 135.50,\n    \"safra\": \"2019\",\n    \"ano_compra\": 2020\n  },\n  {\n    \"codigo\": 20,\n    \"tipo_vinho\": \"Chardonnay\",\n    \"preco\": 130.75,\n    \"safra\": \"2020\",\n    \"ano_compra\": 2021\n  }\n]",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
+

@@ -1,0 +1,14 @@
+ {
+    "action": "string",
+    "userId": "string",
+    "images": {
+      "problem": [
+        "string"
+      ],
+      "hall": [
+        "string"
+      ]
+    },
+   "title": "string",
+   "comment": "string"
+ }

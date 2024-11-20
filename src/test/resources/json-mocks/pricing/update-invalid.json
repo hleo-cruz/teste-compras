@@ -1,0 +1,30 @@
+{
+  "idTask": "000009",
+  "idSubsidiary": "04 0135",
+  "cluster": "2",
+  "search": [
+    {
+      "rival": "000217",
+      "shortDate": "2021-11-18",
+      "time": "01:00",
+      "userId":"008399",
+      "rivalImage": "https://algumacoisa.petz.com.br/TaskCode/adlkjuu03546843513.jpeg",
+      "products": [
+        {
+          "idProtheus": "010003300000053",
+          "priceRival": 18.89,
+          "labelImage": "https://algumacoisa.petz.com.br/TaskCode/adlkjuu03546843513.jpeg",
+          "notFound": false,
+          "reasonDiscount": "desconto promoção"
+        },
+        {
+          "idProtheus": "010037080002388",
+          "priceRival": 0,
+          "labelImage": "",
+          "notFound": true,
+          "reasonDiscount": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "document": "string",
+  "documentImage": "string",
+  "name": "string",
+  "orders": [
+    "string"
+  ],
+  "refusalDocuments": "S",
+  "signatureImage": "string",
+  "subsidiary": "string",
+  "typeReceiver": "P",
+  "typeRefusal": "E"
+}

@@ -1,6 +1,7 @@
 package com.br.teste.compras.client.produto;
 
 import com.br.teste.compras.client.GenericRestTemplateClient;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -17,7 +18,8 @@ import java.util.Objects;
 @Component
 public class ProdutoRestTemplateClient extends GenericRestTemplateClient {
 
-    private static final String URL = "https://rgr3viiqdl8sikgv.public.blob.vercel-storage.com/produtos-mnboX5IPl6VgG390FECTKqHsD9SkLS.json";
+    @Value("${client.url.produto}")
+    private String url;
 
     public List<ProdutoModel> listarProdutos() {
 
@@ -29,7 +31,7 @@ public class ProdutoRestTemplateClient extends GenericRestTemplateClient {
 
         final HttpHeaders headers = headers(params);
 
-        final ResponseEntity<ProdutoModel[]> response = request(URL, HttpMethod.GET, headers, ProdutoModel[].class);
+        final ResponseEntity<ProdutoModel[]> response = request(url, HttpMethod.GET, headers, ProdutoModel[].class);
         return Arrays.asList(Objects.requireNonNull(response.getBody()));
     }
 

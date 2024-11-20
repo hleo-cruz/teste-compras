@@ -1,0 +1,9 @@
+{
+  "orders": [
+    "string"
+  ],
+  "route": "string",
+  "status": "DELIVERED",
+  "userId": "123",
+  "message": "Não encontrado"
+}
